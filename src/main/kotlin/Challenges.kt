@@ -76,4 +76,33 @@ class Challenges {
     fun addUpTo(n: Int): Int {
         return (1..n).toList().sum()
     }
+    //Given positive integer `n` implement a function which returns a list containing all steps up from `0` to `n` and down to
+    //`0`.
+    fun countUpAndDown(n: Int): List<Int> {
+        return (0 until n).toList() + (n downTo 0).toList()
+    }
+    //Given positive integer `n` implement a function, which returns a [factorial](https://en.wikipedia.org/wiki/Factorial) of
+    //that integer. Factorial (of positive integer) is number that is created by multiplying all numbers from 1 to `n` eg.
+    //factorial of `3` (`3!`) is equal to `6` (`3 * 2 * 1`)
+    fun factorial(n: Int): Int {
+        return if (n < 2){
+            1
+        }else{
+            n * factorial(n - 1)
+        }
+    }
+    //Given a list of integers return a list that contains only odd integers (only integers which are not a multiple of `2`).
+    fun filterOdd(list: List<Int>): List<Int> {
+        return list.filter { it % 2 != 0 }
+    }
+    //Given positive integer `n` implement a function which returns a list representing all numbers from `n` to `1`. If `n`
+    //value is zero then empty list should be returned.
+    fun printNumber(n: Int): List<Int> {
+        return if(n < 1){
+            emptyList()
+        }else{
+            (n downTo 1).toList()
+        }
+    }
+
 }

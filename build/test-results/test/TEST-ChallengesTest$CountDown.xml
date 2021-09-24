@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ChallengesTest$CountDown" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-23T04:22:34" hostname="Clays-Air.lan" time="0.005">
-  <properties/>
-  <testcase name="count down from 5()" classname="ChallengesTest$CountDown" time="0.005"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

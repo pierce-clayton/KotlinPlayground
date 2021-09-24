@@ -88,4 +88,75 @@ internal class ChallengesTest {
             assertEquals(challenges.addUpTo(5), 15)
         }
     }
+    @Nested
+    inner class CountUpAndDown{
+        @Test
+        fun `count with 0 should be one entry`() {
+            assertContentEquals(challenges.countUpAndDown(0), listOf(0))
+        }
+        @Test
+        fun `count up and down to 9`() {
+            val test = listOf(0,1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,1,0)
+            assertContentEquals(challenges.countUpAndDown(9), test)
+        }
+    }
+    @Nested
+    inner class RecursiveFactorial{
+        @Test
+        fun `factorial 0 should equal 1`(){
+            assertEquals(challenges.factorial(0), 1)
+        }
+        @Test
+        fun `factorial 5 should equal 120`(){
+            assertEquals(challenges.factorial(5), 120)
+        }
+        @Test
+        fun `factorial 10 should equal 3628800`(){
+            assertEquals(challenges.factorial(10), 3628800)
+        }
+    }
+    @Nested
+    inner class FilterOdd{
+        @Test
+        fun `empty list returns empty list`() {
+            assertContentEquals(challenges.filterOdd(listOf()), emptyList())
+        }
+
+        @Test
+        fun `1, 2, 3 returns 1, 3`() {
+            assertContentEquals(challenges.filterOdd(listOf(1, 2, 3)), listOf(1, 3))
+        }
+
+        @Test
+        fun `2, 49, 2, 5, 4 returns 9, 5`() {
+            assertContentEquals(challenges.filterOdd(listOf(2, 9, 2, 5, 4)), listOf(9, 5))
+        }
+
+        @Test
+        fun `7, 4, 6, 8, 7, 9 returns 7, 7, 9`() {
+            assertContentEquals(challenges.filterOdd(listOf(7, 4, 6, 8, 7, 9)), listOf(7, 7, 9))
+        }
+    }
+    @Nested
+    inner class PrintNumber{
+        @Test
+        fun `printNumber 0 return listOf()`() {
+            assertContentEquals(challenges.printNumber(0), emptyList())
+        }
+
+        @Test
+        fun `printNumber 1 return listOf(1)`() {
+            assertContentEquals(challenges.printNumber(1), listOf(1))
+        }
+
+        @Test
+        fun `printNumber 3 return listOf(3, 2, 1)`() {
+            assertContentEquals(challenges.printNumber(3), listOf(3, 2, 1))
+        }
+
+        @Test
+        fun `printNumber 5 return listOf(5, 4, 3, 2, 1)`() {
+            assertContentEquals(challenges.printNumber(5), listOf(5, 4, 3, 2, 1))
+        }
+    }
 }

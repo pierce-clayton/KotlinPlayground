@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ChallengesTest$RecursivePower" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-09-23T04:22:34" hostname="Clays-Air.lan" time="0.005">
-  <properties/>
-  <testcase name="power 2 with exp 5 equals 32()" classname="ChallengesTest$RecursivePower" time="0.003"/>
-  <testcase name="power 2 with exp 2 equals 4()" classname="ChallengesTest$RecursivePower" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
