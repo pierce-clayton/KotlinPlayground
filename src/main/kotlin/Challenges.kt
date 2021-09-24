@@ -104,5 +104,9 @@ class Challenges {
             (n downTo 1).toList()
         }
     }
-
+    //Given positive integer `n` and integer `step` implement a function which returns a list representing all numbers from
+    //`n` to `1` taking `step` into consideration. If `n` value is zero then empty list should be returned.
+    fun printNumberStep(n: Int, step: Int = 1): List<Int> {
+        return (n downTo 1 step step).toList()
+    }
 }

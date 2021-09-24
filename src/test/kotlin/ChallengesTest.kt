@@ -159,4 +159,26 @@ internal class ChallengesTest {
             assertContentEquals(challenges.printNumber(5), listOf(5, 4, 3, 2, 1))
         }
     }
+    @Nested
+    inner class PrintNumberStep{
+        @Test
+        fun `printNumber 0 step 1 return emptyList()`() {
+            assertContentEquals(challenges.printNumberStep(0), emptyList())
+        }
+
+        @Test
+        fun `printNumber 1 step 1 return listOf(1)`() {
+            assertContentEquals(challenges.printNumberStep(1), listOf(1))
+        }
+
+        @Test
+        fun `printNumber 3 step 2 return listOf(3, 1)`() {
+            assertContentEquals(challenges.printNumberStep(3, 2), listOf(3, 1))
+        }
+
+        @Test
+        fun `printNumber 11 step 3 return listOf(11, 8, 5, 2)`() {
+            assertContentEquals(challenges.printNumberStep(11, 3), listOf(11, 8, 5, 2))
+        }
+    }
 }
